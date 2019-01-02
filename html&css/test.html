@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <style>
+            :root {
+                background: yellow;
+                font-family: monospace;
+                --image-width: 350px;
+                --image-height: 210px;
+                --second-image-top: 160px;
+                --second-image-left: 700px;
+                --third-image-top: 160px;
+                --third-image-left: 750px;
+            }
+
+            @media (max-width: 500px){
+                :root {
+                    background: yellow;
+                    --image-width: 175px;
+                    --image-height: 105px;
+                    --second-image-top: 705px;
+                    --second-image-left: 50px;
+                    --third-image-top: 705px;
+                    --third-image-left: 100px;   
+                }
+
+                
+            }
+
+            p {
+                text-align: justify;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            nav a {
+                text-decoration: none;
+                /* font-size: 16px; */
+                /* font-weight: 500; */
+                font-size: 20px;
+                color: yellow;
+            }
+
+            a:hover {
+                color: violet;
+            }
+
+            nav a:hover {
+                color: blue;
+                /* font-size: 20px; */
+            }
+
+            a {
+                text-decoration: none;
+                color: blue;
+            }
+
+            nav {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background: violet;
+                width: 100%;
+            }
+
+            footer {
+                position: fixed;
+                background: violet;
+                width: 90%;
+                height: 30px;
+                bottom: 0px;
+                left: 60px;
+                text-align: center;
+
+            }
+
+            nav ul {
+                margin: 0px;
+                padding: 10px 0px 10px 30px;
+                /* background: gray; */
+            }
+
+            nav li {
+                display: inline;
+                margin-right: 20px;
+                font-weight: bold;
+                /* padding: 15px 10px 10px 10px; */
+            }
+
+            h1 {
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 800;
+                /* position: relative; */
+                margin-top: 65px;
+            }
+
+            h2 {
+                margin-top: 20px;
+            }
+
+            h1:hover {
+                
+            }
+
+           .violet-color {
+               color: violet;
+           }
+
+           .blue-color {
+               color: blue;
+           }
+           
+           .margin {
+               margin: 10px 10px 10px 10px;
+           }
+
+           .padding {
+               padding: 5px 5px 5px 5px;
+           }
+
+           .para-padding {
+               padding: 0px 10px 0px 10px;
+           }
+
+           .radio-margin {
+               margin: 10px;
+           }
+
+           .checkbox-margin {
+               margin: 10px;
+           }
+
+           .p-box {
+               border-style: solid;
+               border-color: gray;
+               background: rgba(0,0,0,0);
+               border-width: 1px;
+               border-radius: 5px;
+               float: left;
+               width: 40%;
+               margin: 10px 10px 50px 10px;
+               box-shadow: 5px 10px 10px rgba(0,0,0,0.19);
+           }
+
+           .image-box {
+               float: right;
+               width: 50%;
+               margin: 10px 10px 10px 10px;
+           }
+
+           .form-box {
+               float: right;
+               width: 50%;
+               margin: 10px 10px 10px 10px; 
+           }
+
+           /* aside, section {
+               padding: 10px;
+               background-color: gray;
+           } */
+
+           #page-header {
+               font-size: 30px;
+               text-transform: uppercase;
+               color: yellow;
+               font-weight: bold;
+               margin-left: 70%;
+           }
+
+           .image-size {
+               width: var(--image-width);
+               height: var(--image-height);
+               box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.19), 5px 5px 6px rgba(0, 0, 0, 0.23);
+           }
+
+           .first-image {
+               position: relative;
+               z-index: 3;
+           }
+        
+           .second-image {
+               position: absolute;
+               top: var(--second-image-top);
+               left: var(--second-image-left);
+               z-index: 2;
+           }
+
+           .third-image {
+               position: absolute;
+               top: var(--third-image-top);
+               left: var(--third-image-left);
+               z-index: 1;
+           }
+
+           .second-image:hover {
+               z-index: 3;
+           }
+
+           .third-image:hover {
+               z-index: 3;
+           }
+        
+           #input-form {
+               margin-top: 50px;
+           }
+
+           button {
+               background: blue;
+               border-radius: 10%;
+               color:yellow;
+               border-width: 1px;
+           }
+
+           .hight-light {
+               background-color: rgba(236,71,233,0.4);
+           }
+           
+        </style>
+
+
+        <nav id='nav'>
+            <ul>
+                <li><a href='#'>Home</a></li>
+                <li><a href='#'>Store</a></li>
+                <li id='page-header'>html & css</li>
+            </ul>
+        </nav>
+
+        <footer>&copy; 2019 HTML5 & CSS</footer>
+        
+    </head>
+
+    <body>
+        <!-- <h1 class='page-header'>Html & CSS</h1> -->
+        <h1>Hello HTML5 & CSS</h1>
+
+        <h2 class=''>Register Form</h2>
+
+        <div id='paragraph' class="margin para-padding p-box">
+            <p> 
+                <em><span class='hight-light'>Shapely is a powerful and versatile one page WordPress theme</span> with pixel perfect design and outstanding functionality. It is by far the most advanced free WordPress theme available today with loads of unmatched customization options. This theme comes with several homepage widgets that can be used to add portfolio, testimonials, parallax sections, your product or service information, call for action and much more.</em>
+            </p>
+            <p>
+                <em><strong>Shapely supports most free and premium WordPress plugins such as WooCommerce, Jetpack, Gravity Forms, Contact Form 7, Yoast SEO, Google Analytics by Yoast and much more. Needless to say that theme is mobile friendly and responsive that makes it look stunning on any device.</strong></em>
+            </p>
+            <p>
+                <em>This theme is the best suited for business, landing page, portfolio, <a href='#'>ecommerce</a>, store, local business, personal websites but can be tweaked to be used as blog, magazine or any other awesome website while highlighting its unique one page setup. This is going to be the last WordPress theme you will ever want to use because it is so much better than anything you have seen and it will deliver the best SEO results since we have well optimized it structure.</em>
+            </p>
+        </div>
+
+        <div id='div-image' class='image-box'>
+            <a href="#">
+                <image class='margin image-size first-image' src="IMG_7106.JPG" alt='Water World'></image>
+            </a>
+            <a href="#">
+                <image class='margin image-size second-image' src="IMG_E6976.JPG" alt='PhatKaPong'></image>
+            </a>
+            <a href="#">
+                <image class='margin image-size third-image' src="IMG_7106.JPG" alt='PhatKaPong'></image>
+            </a>         
+        </div>
+
+    <div id='input-form' class='form-box'>
+        <form action="/">
+
+            <input class='margin padding' type="text" placeholder="Name"><br>
+
+            <label for='male' class='radio-margin'>
+                <input class='margin padding' id='male' type='radio' name='male-female' checked>Male
+            </label>
+
+            <label for='female' class='radio-margin'>
+                <input class='margin padding' id='female' type='radio' name='male-female'>Female
+            </label><br>
+
+            <label for='a' class="checkbox-margin">
+                <input class='margin padding' id='a' type='checkbox' name='a-b-c' checked>a
+            </label>
+
+            <label for='b' class="checkbox-margin">
+                <input class='margin padding' id='b' type='checkbox' name='a-b-c'>b
+            </label>
+
+            <label for='c' class="checkbox-margin">
+                <input class='margin padding' id='c' type='checkbox' name='a-b-c'>c
+            </label><br>
+
+            <button class='margin padding' type="submit">Submit</button> 
+
+        </form>
+    </div>
+    </body>
+</html>
